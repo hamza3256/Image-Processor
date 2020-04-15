@@ -14,7 +14,7 @@ public class Histogram {
 	/**
 	 * Exercise 1
 	 * To find the histogram of an image by counting the numbers of the pixel values in the image.
-	 * @param originalImage
+	 *
 	 */
 	public static void createHistogram(BufferedImage originalImage) {
     	int[][][] ImageArray1 = Demo.convertToArray(originalImage); 

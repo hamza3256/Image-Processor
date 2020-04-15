@@ -96,7 +96,7 @@ public class ArithmeticAndBool {
 
     // Nots the image 
     // From 11 on lecture 3 - same as negative
-    // Logical NOT or invert is an operator which takes a binary or graylevel 
+    // Logical NOT or invert is an operator which takes a binary or gray level
     // image as input and produces its photographic negative, i.e. 
     // dark areas in the input image become light and light areas become dark.
   	public static BufferedImage NOT(BufferedImage originalImage) {
@@ -191,19 +191,19 @@ public class ArithmeticAndBool {
 		for (int y = 0; y < originalImage.getHeight(); y++) {
 			for (int x = 0; x < originalImage.getWidth(); x++) {
 				if (ImageArray2[x][y][1] == 255) {
-					r = ImageArray1[x][y][1] * 1;
+					r = ImageArray1[x][y][1];
 				} else {
-					r = ImageArray1[x][y][1] * 0;
+					r = 0;
 				} // r
 				if (ImageArray2[x][y][2] == 255) {
-					g = ImageArray1[x][y][2] * 1;
+					g = ImageArray1[x][y][2];
 				} else {
-					g = ImageArray1[x][y][2] * 0;
+					g = 0;
 				} // g
 				if (ImageArray2[x][y][3] == 255) {
-					b = ImageArray1[x][y][3] * 1;
+					b = ImageArray1[x][y][3];
 				} else {
-					b = ImageArray1[x][y][3] * 0;
+					b = 0;
 				} // b
 				ImageArray2[x][y][1] = r; // r
 				ImageArray2[x][y][2] = g; // g

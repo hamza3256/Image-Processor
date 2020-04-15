@@ -1,1 +1,1 @@
-"# Image Processing coursework" 
+Image Processing coursework

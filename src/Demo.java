@@ -67,14 +67,12 @@ public class Demo extends Component implements ActionListener {
 	JFileChooser jfc;
 
 
-
 	public Demo() {
 		jfc = new JFileChooser();
 		jfc.setCurrentDirectory(new File(System.getProperty("user.dir") + System.getProperty("file.separator") +"/images"));
 
 		imageList = new ArrayList<BufferedImage>();
 
-		//mem = new Stack();
 		try {
 
 			// Load bi (file1)
@@ -224,7 +222,10 @@ public class Demo extends Component implements ActionListener {
 				result[x][y][3] = b;
 			}
 		}
+
 		return result;
+
+
 	}
 
 	// ************************************
@@ -377,21 +378,21 @@ public class Demo extends Component implements ActionListener {
 		return Demo.convertToBimage(ImageArray2);
 	}
 
-
-
 	public void filterImage() {
 		String sc;
 		String sh;
 		boolean isValid = false;
 		int i = 3;
 		float f = 3;
+
 		if (opIndex == lastOp) {
 			return;
 		}
+
 		lastOp = opIndex;
 		switch (opIndex) {
-
 		// Lab 1
+
 		case 0:
 			biFiltered = bi; /* original */
 			return;
@@ -655,7 +656,7 @@ public class Demo extends Component implements ActionListener {
 					} catch (IOException ex) {
 						ex.printStackTrace();
 					}
-				}else if(FileSystemView.getFileSystemView().getSystemTypeDescription(file).contains("ROI")){
+				}else if(FileSystemView.getFileSystemView().getSystemDisplayName(file).contains("ROI")){
 					try {
 						roi = ImageIO.read(file);
 						imageList.add(roi);

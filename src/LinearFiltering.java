@@ -27,8 +27,10 @@ public class LinearFiltering {
 		for (int row = 0; row < 3; row++) {
 			for (int col = 0; col < 3; col++) {
 				total = total + Mask[row][col];
+
 			}
 		}
+
 		float r, g, b;
 		for (int y = 1; y < originalImage.getHeight() - 1; y++) {
 			for (int x = 1; x < originalImage.getWidth() - 1; x++) {
@@ -62,6 +64,7 @@ public class LinearFiltering {
 				total = total + Mask[row][col];
 			}
 		}
+		System.out.println(total);
 		float r, g, b;
 		for (int y = 1; y < originalImage.getHeight() - 1; y++) {
 			for (int x = 1; x < originalImage.getWidth() - 1; x++) {
