@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53caa4ac-721e-4843-b635-e96ad5b8ae9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ArithmeticAndBool.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ArithmeticAndBool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Demo$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Demo$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Demo$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Demo$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Demo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/LinearFiltering.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/LinearFiltering.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArithmeticAndBool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArithmeticAndBool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Histogram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Histogram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinearFiltering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinearFiltering.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +56,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1586902231775" />
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1586951252575">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1586951252575" />
     <state x="549" y="150" key="FileChooserDialogImpl" timestamp="1586905324801">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
