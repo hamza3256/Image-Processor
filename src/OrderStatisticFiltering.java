@@ -10,7 +10,6 @@ public class OrderStatisticFiltering {
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
                 double random = Math.random() * 1;
-
                 if (random < 0.05) {
                     ImageArray2[x][y][0] = 255;
                     ImageArray2[x][y][1] = 0;

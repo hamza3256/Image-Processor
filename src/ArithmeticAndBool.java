@@ -157,8 +157,8 @@ public class ArithmeticAndBool {
         for(int y=0; y<originalImage.getHeight(); y++){
     		for(int x=0; x<originalImage.getWidth(); x++){
 	    		r = ImageArray1[x][y][1] ^ ImageArray2[x][y][1]; //r
-	    		g = ImageArray1[x][y][2]  ^ ImageArray2[x][y][2]; //g
-	    		b = ImageArray1[x][y][3]  ^ ImageArray2[x][y][3]; //b
+	    		g = ImageArray1[x][y][2] ^ ImageArray2[x][y][2]; //g
+	    		b = ImageArray1[x][y][3] ^ ImageArray2[x][y][3]; //b
 	    		ImageArray2[x][y][1] = r; //r
 	    		ImageArray2[x][y][2] = g; //g
 	    		ImageArray2[x][y][3] = b; //b
