@@ -5,8 +5,8 @@ Built an image processor in Java that:
 - performs arithmetic and Boolean operations between images 
 - performs point processing and bit-plane slicing 
 - performs a convolution on the image for
-  o smoothing the image
-  o edge detection in the image 
+  - smoothing the image
+  - edge detection in the image 
 - performs order statistic filtering
 
 Furthermore, to enhance the program with a number of image processing algorithms to improve/alter the
