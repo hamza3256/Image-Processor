@@ -9,14 +9,13 @@ Built an image processor in Java that:
   - edge detection in the image 
 - performs order statistic filtering
 
-Furthermore, to enhance the program with a number of image processing algorithms to improve/alter the
-image contrast:
+Image processing algorithms to improve/alter the image contrast:
 
 - histogram equalisation 
 - thresholding 
 
-Also, able to enhance the program to be able to select a Region of Interest (ROI), enable to perform the image
+Enhanced the program by being able to select a Region of Interest (ROI), to perform the image
 processing functions on the ROI. 
 
-Able to enhance the program with a menu system. Allow to perform a combination of image
+Enhanced the program with a menu system. Allowing the user to perform a combination of image
 processing functions on the ROI. Includes an "undo" function. 
