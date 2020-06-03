@@ -76,7 +76,7 @@ public class Demo extends Component implements ActionListener {
 		try {
 
 			// Load bi (file1)
-			File f = new File("images\\BaboonRGB.bmp");
+			File f = new File("images\\check.png");
 			System.out.println("File we are trying to load: " + f);
 			System.out.println(f.canRead());
 			System.out.println(f.getAbsolutePath());
@@ -87,7 +87,7 @@ public class Demo extends Component implements ActionListener {
 			System.out.println(bi.getType());
 
 			// Load bi3 (file2)
-			bi3 = ImageIO.read(new File("images\\LenaRGB.bmp"));
+			bi3 = ImageIO.read(new File("images\\check.png"));
 
 			roi = ImageIO.read(new File("images\\roi.bmp"));
 
@@ -395,9 +395,10 @@ public class Demo extends Component implements ActionListener {
 
 		case 0:
 			biFiltered = bi; /* original */
+			imageList.add(biFiltered);
 			return;
 		case 1:
-			biFiltered = ImageNegative(imageList.get(0)); /* Image Negative */
+			biFiltered = ImageNegative(imageList.get(imageList.size()-1)); /* Image Negative */
 			imageList.add(biFiltered);
 			//repaint();
 			return;
@@ -412,7 +413,7 @@ public class Demo extends Component implements ActionListener {
 					JOptionPane.showMessageDialog(null, "Number not within specified range, please try again.");
 				}
 			}
-			biFiltered = RescaleAndShift.rescale(bi, f); /* Image Rescale */
+			biFiltered = RescaleAndShift.rescale(imageList.get(imageList.size()-1), f); /* Image Rescale */
 			imageList.add(biFiltered);
 			return;
 		case 3:
@@ -427,11 +428,11 @@ public class Demo extends Component implements ActionListener {
 					JOptionPane.showMessageDialog(null, "Number not within specified range, please try again.");
 				}
 			}
-			biFiltered = RescaleAndShift.shifting(bi, i); /* Image shift */
+			biFiltered = RescaleAndShift.shifting(imageList.get(imageList.size()-1), i); /* Image shift */
 			imageList.add(biFiltered);
 			return;
 		case 4:
-			biFiltered = RescaleAndShift.randomShiftScale(bi); /* Random shift and scale */
+			biFiltered = RescaleAndShift.randomShiftScale(imageList.get(imageList.size()-1)); /* Random shift and scale */
 			imageList.add(biFiltered);
 			return;
 
@@ -439,7 +440,7 @@ public class Demo extends Component implements ActionListener {
 		case 5:
 			float s = 1;
 			int q = 1;
-			biFiltered = ArithmeticAndBool.Addition(bi, bi3);
+			biFiltered = ArithmeticAndBool.Addition(imageList.get(imageList.size()-1), bi3);
 			biFiltered = RescaleAndShift.shifting(biFiltered, q);
 			biFiltered = RescaleAndShift.rescale(biFiltered, s);
 			imageList.add(biFiltered);
@@ -447,55 +448,55 @@ public class Demo extends Component implements ActionListener {
 		case 6:
 			s = 1.0f;
 			q = 1;
-			biFiltered = ArithmeticAndBool.Subtraction(bi, bi3);
+			biFiltered = ArithmeticAndBool.Subtraction(imageList.get(imageList.size()-1), bi3);
 			biFiltered = RescaleAndShift.shifting(biFiltered, q);
 			biFiltered = RescaleAndShift.rescale(biFiltered, s);
 			imageList.add(biFiltered);
 			return;
 		case 7:
-			biFiltered = ArithmeticAndBool.Multiplication(bi, bi3);
+			biFiltered = ArithmeticAndBool.Multiplication(imageList.get(imageList.size()-1), bi3);
 			imageList.add(biFiltered);
 			return;
 		case 8:
-			biFiltered = ArithmeticAndBool.Division(bi, bi3);
+			biFiltered = ArithmeticAndBool.Division(imageList.get(imageList.size()-1), bi3);
 			imageList.add(biFiltered);
 			return;
 		case 9:
-			biFiltered = ArithmeticAndBool.NOT(bi);
+			biFiltered = ArithmeticAndBool.NOT(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 10:
-			biFiltered = ArithmeticAndBool.AND(bi, bi3);
+			biFiltered = ArithmeticAndBool.AND(imageList.get(imageList.size()-1), bi3);
 			imageList.add(biFiltered);
 			return;
 		case 11:
-			biFiltered = ArithmeticAndBool.OR(bi, bi3);
+			biFiltered = ArithmeticAndBool.OR(imageList.get(imageList.size()-1), bi3);
 			imageList.add(biFiltered);
 			return;
 		case 12:
-			biFiltered = ArithmeticAndBool.XOR(bi, bi3);
+			biFiltered = ArithmeticAndBool.XOR(imageList.get(imageList.size()-1), bi3);
 			imageList.add(biFiltered);
 			return;
 		case 13:
-			biFiltered = ArithmeticAndBool.roiAND(bi, roi);
+			biFiltered = ArithmeticAndBool.roiAND(imageList.get(imageList.size()-1), roi);
 			imageList.add(biFiltered);
 			return;
 		case 14:
-			biFiltered = ArithmeticAndBool.roiMultiplication(bi, roi);
+			biFiltered = ArithmeticAndBool.roiMultiplication(imageList.get(imageList.size()-1), roi);
 			imageList.add(biFiltered);
 			return;
 		case 15:
-			biFiltered = ArithmeticAndBool.roiNOT(bi, roi);
+			biFiltered = ArithmeticAndBool.roiNOT(imageList.get(imageList.size()-1), roi);
 			imageList.add(biFiltered);
 			return;
 
 		// Lab 4
 		case 16:
-			biFiltered = PointProcessing.negLinearTransform(bi);
+			biFiltered = PointProcessing.negLinearTransform(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 17:
-			biFiltered = PointProcessing.logFunction(bi);
+			biFiltered = PointProcessing.logFunction(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 18:
@@ -512,11 +513,11 @@ public class Demo extends Component implements ActionListener {
 					JOptionPane.showMessageDialog(null, "Number not within specified range, please try again.");
 				}
 			}
-			biFiltered = PointProcessing.powerLaw(bi, f);
+			biFiltered = PointProcessing.powerLaw(imageList.get(imageList.size()-1), f);
 			imageList.add(biFiltered);
 			return;
 		case 19:
-			biFiltered = PointProcessing.randomLUT(bi);
+			biFiltered = PointProcessing.randomLUT(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 20:
@@ -531,79 +532,79 @@ public class Demo extends Component implements ActionListener {
 					JOptionPane.showMessageDialog(null, "Number not within specified range, please try again.");
 				}
 			}
-			biFiltered = PointProcessing.bitplaneSlicing(bi, i);
+			biFiltered = PointProcessing.bitplaneSlicing(imageList.get(imageList.size()-1), i);
 			imageList.add(biFiltered);
 			return;
 		// Lab 5
 		case 21:
-			biFiltered = Histogram.histogramEqualisation(bi);
+			biFiltered = Histogram.histogramEqualisation(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		// Lab 6
 		case 22:
-			biFiltered = LinearFiltering.average(bi);
+			biFiltered = LinearFiltering.average(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 23:
-			biFiltered = LinearFiltering.weightedAvg(bi);
+			biFiltered = LinearFiltering.weightedAvg(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 24:
-			biFiltered = LinearFiltering.fourNL(bi);
+			biFiltered = LinearFiltering.fourNL(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 25:
-			biFiltered = LinearFiltering.eightNL(bi);
+			biFiltered = LinearFiltering.eightNL(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 26:
-			biFiltered = LinearFiltering.fourNLEnhanced(bi);
+			biFiltered = LinearFiltering.fourNLEnhanced(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 27:
-			biFiltered = LinearFiltering.eightNLEnhanced(bi);
+			biFiltered = LinearFiltering.eightNLEnhanced(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 28:
-			biFiltered = LinearFiltering.robertsA(bi);
+			biFiltered = LinearFiltering.robertsA(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 29:
-			biFiltered = LinearFiltering.robertsB(bi);
+			biFiltered = LinearFiltering.robertsB(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 30:
-			biFiltered = LinearFiltering.sobelX(bi);
+			biFiltered = LinearFiltering.sobelX(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 31:
-			biFiltered = LinearFiltering.sobelY(bi);
+			biFiltered = LinearFiltering.sobelY(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		// Lab 7
 		case 32:
-			biFiltered = OrderStatisticFiltering.saltPepper(bi);
+			biFiltered = OrderStatisticFiltering.saltPepper(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 33:
-			biFiltered = OrderStatisticFiltering.minFiltering(bi);
+			biFiltered = OrderStatisticFiltering.minFiltering(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 34:
-			biFiltered = OrderStatisticFiltering.maxFiltering(bi);
+			biFiltered = OrderStatisticFiltering.maxFiltering(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 35:
-			biFiltered = OrderStatisticFiltering.midpointFilter(bi);
+			biFiltered = OrderStatisticFiltering.midpointFilter(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		case 36:
-			biFiltered = OrderStatisticFiltering.medianFiltering(bi);
+			biFiltered = OrderStatisticFiltering.medianFiltering(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 			return;
 		// Lab 8
 		case 37: 
-			Thresholding.standardDeviation(bi);
+			Thresholding.standardDeviation(imageList.get(imageList.size()-1));
 			return;
 		case 38:
 			// Threshold between 0 and 255
@@ -618,11 +619,11 @@ public class Demo extends Component implements ActionListener {
 					JOptionPane.showMessageDialog(null, "Number not within specified range, please try again.");
 				}
 			}
-			biFiltered = Thresholding.simpleThresholding(bi, i);
+			biFiltered = Thresholding.simpleThresholding(imageList.get(imageList.size()-1), i);
 			imageList.add(biFiltered);
 			return;
 		case 39:
-			biFiltered = Thresholding.automatedThresholding(bi);
+			biFiltered = Thresholding.automatedThresholding(imageList.get(imageList.size()-1));
 			imageList.add(biFiltered);
 		}
 	}
@@ -716,8 +717,8 @@ public class Demo extends Component implements ActionListener {
 		
 	};
 
-	static final int WINDOW_WIDTH = 1280;
-	static final int WINDOW_HEIGHT = 720;
+	static final int WINDOW_WIDTH = 1000;
+	static final int WINDOW_HEIGHT = 360;
 
 
 	public static void createDemo() {

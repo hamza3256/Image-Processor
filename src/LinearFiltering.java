@@ -1,4 +1,5 @@
 import java.awt.image.BufferedImage;
+import java.util.Arrays;
 
 /*
  * What�s the difference between shifting and absolute value conversion? 
@@ -113,7 +114,8 @@ public class LinearFiltering {
 		}
 		return Demo.findShiftAndScale((ImageArray2));
 	}
-	
+
+
 	public static BufferedImage eightNL(BufferedImage originalImage) {
 		int[][][] ImageArray1 = Demo.convertToArray(originalImage);
 		int[][][] ImageArray2 = Demo.convertToArray(originalImage);

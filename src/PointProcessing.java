@@ -104,6 +104,7 @@ public class PointProcessing {
 				ImageArray2[x][y][1] = (r >> k) & 1; // r
 				ImageArray2[x][y][2] = (g >> k) & 1; // g
 				ImageArray2[x][y][3] = (b >> k) & 1; // b
+				
 				// Binary so value is 0 or 1 so make 1 = 255
 				if (ImageArray2[x][y][1] == 1) {
 					ImageArray2[x][y][1] = 255;
@@ -118,4 +119,5 @@ public class PointProcessing {
 		}
 		return Demo.convertToBimage(ImageArray2);
 	}
+
 }
