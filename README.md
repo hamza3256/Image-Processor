@@ -9,7 +9,7 @@ Built an image processor in Java witht the following functionalities:
   - edge detection in the image 
 - perform order statistic filtering
 
-Image processing algorithms to improve/alter the image contrast:
+Image processing algorithms to improve/alter the image contrast using:
 
 - histogram equalisation 
 - thresholding 
