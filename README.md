@@ -17,6 +17,6 @@ Image processing algorithms to improve/alter the image contrast using:
 Incremental improvements were also made to the program such as being able to select a Region of Interest (ROI) to perform image
 processing functions on that ROI. 
 
-Made the program user friendly by implementing a menu system. The menu system allows user to perform multiple image processing functions on one or multiple images, and/or ROI of a given image. 
+Made the program user friendly by implementing a menu system. The menu system allows user to perform multiple image processing functions to one or multiple images, and/or ROI of a given image. 
 
 I have also included an "undo" function to undo image additions or function processes on any given image. 
