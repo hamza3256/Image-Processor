@@ -7,7 +7,7 @@ Built an image processor in Java witht the following functionalities:
 - perform a convolution on the image for
   - smoothing the image
   - edge detection in the image 
-- performs order statistic filtering
+- perform order statistic filtering
 
 Image processing algorithms to improve/alter the image contrast:
 
