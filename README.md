@@ -14,8 +14,8 @@ Image processing algorithms to improve/alter the image contrast using:
 - histogram equalisation 
 - thresholding 
 
-Incremental improvements were also made to the program such as able to select a Region of Interest (ROI) to perform image
-processing functions on the ROI. 
+Incremental improvements were also made to the program such as being able to select a Region of Interest (ROI) to perform image
+processing functions on that ROI. 
 
 Also improved the program with a menu system. Allowing the user to perform multiple image
 processing functions on the ROI. I also included an "undo" function to undo an image addition or function processes on any given image. 
