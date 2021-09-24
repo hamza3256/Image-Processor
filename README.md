@@ -1,4 +1,4 @@
-Built an image processor in Java witht the following functionalities:
+Built an image processor in Java with the following functionalities:
 
 - load and display an image
 - pixel value rescaling and shifting 
