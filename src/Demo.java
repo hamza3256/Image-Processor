@@ -640,7 +640,6 @@ public class Demo extends Component implements ActionListener {
 				setOpIndex(cb.getSelectedIndex());
 
 				repaint();}
-//
 		}
 
 		if (e.getSource() == addButton) {
